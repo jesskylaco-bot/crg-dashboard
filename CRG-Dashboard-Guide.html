@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CRG Dashboard — Operations Manager &amp; Super Admin Guide</title>
+<style>
+  :root { --black:#0a0a0a; --sage:#8aab8e; --sage-dark:#5a7a5e; --cream:#f5f5f3; --line:#e2e2dd; --muted:#6b6b66; }
+  * { box-sizing:border-box; }
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#1c1c1a; line-height:1.55; font-size:13px; margin:0; }
+  h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; color:var(--black); line-height:1.2; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  h2 { font-size:21px; margin:34px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--sage); }
+  h3 { font-size:16px; margin:20px 0 6px; color:#222; }
+  p { margin:8px 0; }
+  a { color:#2980b9; }
+  ul,ol { margin:8px 0 8px 0; padding-left:22px; }
+  li { margin:4px 0; }
+  code { background:var(--cream); padding:1px 5px; border-radius:4px; font-size:12px; }
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:11.5px; }
+  th,td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:var(--black); color:#fff; font-weight:600; font-family:-apple-system,sans-serif; }
+  tbody tr:nth-child(even) { background:#fafaf8; }
+  .yes { color:#2e7d32; font-weight:700; text-align:center; }
+  .no  { color:#c0392b; font-weight:700; text-align:center; }
+  .cover { background:var(--black); color:#fff; padding:60px 50px; margin:0 0 10px; }
+  .cover h1 { color:#fff; font-size:38px; }
+  .cover .dot { color:var(--sage); }
+  .cover p { color:#c9c9c4; font-size:14px; }
+  .cover .brand { font-family:Georgia,serif; font-size:46px; font-weight:700; letter-spacing:1px; }
+  .wrap { padding:0 50px 50px; }
+  .lead { font-size:14px; color:#333; }
+  .callout { border-left:4px solid var(--sage); background:#f3f7f3; padding:10px 14px; border-radius:0 8px 8px 0; margin:12px 0; }
+  .warn { border-left:4px solid #e0a000; background:#fdf8ec; padding:10px 14px; border-radius:0 8px 8px 0; margin:12px 0; }
+  .toc { background:var(--cream); border:1px solid var(--line); border-radius:10px; padding:16px 22px; }
+  .toc ol { margin:4px 0; }
+  .tag { display:inline-block; background:var(--sage); color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; vertical-align:middle; }
+  .tag.admin { background:#c0392b; }
+  .small { font-size:11px; color:var(--muted); }
+  .pagebreak { page-break-before:always; }
+  @page { margin:14mm 0; }
+  @media print { .wrap{padding:0 16mm 16mm;} .cover{padding:40mm 16mm;} h2{ page-break-after:avoid;} table{ page-break-inside:avoid;} }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="brand">CRG<span class="dot">.</span></div>
+  <h1>CRG Dashboard</h1>
+  <p style="font-size:18px;color:#fff;font-family:Georgia,serif;">Operations Manager &amp; Super Admin Guide</p>
+  <p style="margin-top:24px;">A complete, plain-language walkthrough of the Cobb Realty Group platform —<br>every page, every role, every permission, and everything you control as Super Admin.</p>
+  <p class="small" style="color:#888;margin-top:30px;">Internal handover document · Prepared for the Operations Manager</p>
+</div>
+
+<div class="wrap">
+
+<p class="lead">Welcome! This guide explains the CRG Dashboard from top to bottom in everyday language — no technical background needed. It is written especially for you as the <strong>Super Admin</strong> (the person with full control of the app). By the end you will know what the app does, what every screen is for, exactly who can see and do what, and the handful of things only you can do.</p>
+
+<div class="toc">
+<strong>Contents</strong>
+<ol>
+  <li>What the app is</li>
+  <li>The technology behind it (in simple terms)</li>
+  <li>Accounts: logging in, registering, passwords &amp; email</li>
+  <li>The six roles and what each can do</li>
+  <li>The complete "Who can see &amp; do what" matrix</li>
+  <li>Every screen, explained</li>
+  <li>Manage Roles — your control panel for access</li>
+  <li>Notifications</li>
+  <li>The data behind the app</li>
+  <li>Important things to be aware of</li>
+  <li>Quick-start checklist for the Super Admin</li>
+</ol>
+</div>
+
+<h2>1. What the app is</h2>
+<p>The <strong>CRG Dashboard</strong> (internally also called the "CRG Platform") is an internal operations hub built for <strong>Cobb Realty Group</strong>. It gives the whole team one home base to:</p>
+<ul>
+  <li>Manage real-estate <strong>transactions / deals</strong> through their full pipeline</li>
+  <li>Browse a <strong>team directory</strong> with contact details</li>
+  <li>Access <strong>training resources and SOPs</strong></li>
+  <li>Run <strong>new-agent onboarding</strong> with task tracking and approvals</li>
+  <li>Post company <strong>announcements</strong></li>
+  <li>Reach important <strong>forms</strong></li>
+</ul>
+<p>It is a <strong>mobile-first</strong> app: it's designed to look and feel like a phone app. On a computer it appears centred in a narrow, phone-shaped frame. It is a <strong>PWA (Progressive Web App)</strong>, meaning each person can install it onto their phone's home screen and open it like a normal app — but it's delivered over the web, with no app store involved.</p>
+
+<h2>2. The technology behind it (in simple terms)</h2>
+<ul>
+  <li>The app itself is hosted on <strong>Vercel</strong> — a service that publishes the website online over a secure (HTTPS) connection.</li>
+  <li>All the data, the user logins, and uploaded files are handled by <strong>Supabase</strong> — a cloud service that provides three things: a <strong>database</strong> (where information is stored), an <strong>authentication system</strong> (logins/passwords), and <strong>file storage</strong> (for photos and documents).</li>
+  <li>Everything you see in the app is stored in the Supabase database. Uploaded files live in two storage areas: one for <strong>team member photos</strong>, one for <strong>onboarding documents</strong>.</li>
+</ul>
+
+<h2>3. Accounts: logging in, registering, passwords &amp; email</h2>
+
+<h3>Logging in</h3>
+<p>People sign in with their <strong>email and password</strong>. Anyone who isn't logged in is automatically sent to the login screen when they try to open an internal page. Anyone already logged in who opens the login or signup screen is sent straight to the dashboard.</p>
+
+<h3>Registering (signing up) — and the key restriction</h3>
+<p>To register, a person enters their <strong>full name, email, password</strong> (at least 8 characters) and a confirmation.</p>
+<div class="callout">
+<strong>Important — the email gate:</strong> A person can <strong>only</strong> register if their email has already been added to the <strong>Team Directory</strong> as an <strong>active</strong> member. If it hasn't, signup is blocked with the message: <em>"This email is not registered with the team. Please contact your admin to be added first."</em>
+<br><br>
+So the correct order is always: <strong>(1)</strong> you (Super Admin) add the person to the Team Directory with their email → <strong>(2)</strong> that person can then create their account with that same email.
+</div>
+<p>When someone signs up successfully, the system automatically creates their profile and assigns them the <strong>"New Agent"</strong> role, with onboarding status set to "not started."</p>
+
+<h3>Forgot password</h3>
+<p>A user clicks <strong>"Forgot password?"</strong> on the login screen and enters their email. The system emails them a secure reset link. Clicking the link opens a <strong>"Set a new password"</strong> screen where they choose a new password (at least 8 characters) and confirm it — then they're signed in. This works fully, end to end.</p>
+<div class="callout">
+<strong>Two notes:</strong> (1) For security, the reset link must be opened <em>in the same web browser</em> the request was made from, and it expires after a while — if it's expired, the screen offers a "Request a new link" button. (2) As Super Admin you can <em>also</em> reset anyone's password directly from the Supabase Dashboard (Authentication → Users → select the user), which is handy if someone is fully locked out.
+</div>
+
+<h3>Changing password (while logged in)</h3>
+<p>On the <strong>Profile</strong> page, a user enters their <strong>current</strong> password (which is re-checked), then a <strong>new</strong> password (at least 6 characters) and a confirmation.</p>
+
+<h3>Changing email (needs your approval)</h3>
+<p>On the <strong>Profile</strong> page a user can request an email change. This does <strong>not</strong> happen immediately — it creates a request that an admin must approve. (Full flow in the Email Change Requests screen below.)</p>
+
+<h2 class="pagebreak">4. The six roles and what each can do</h2>
+<p>There are <strong>six roles</strong>. Each role has a set of permission switches. These switches are controlled from the <strong>Manage Roles</strong> page (which only you, the Super Admin, can open). The table below shows the <strong>current live settings</strong>.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Role</th>
+  <th>View ALL transactions</th>
+  <th>Edit transactions</th>
+  <th>Manage users</th>
+  <th>Manage onboarding</th>
+  <th>View reports</th>
+  <th>Manage announcements</th>
+  <th>Access training</th>
+  <th>Manage forms</th>
+  <th>Must onboard</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Super Admin / Leadership</strong></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td></tr>
+<tr><td><strong>Operations Manager</strong></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td></tr>
+<tr><td><strong>Transaction Coordinator</strong></td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Virtual Assistant / Marketing</strong></td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Agent</strong></td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>New Agent</strong></td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td></tr>
+</tbody>
+</table>
+
+<p><strong>What each switch unlocks:</strong></p>
+<ul>
+  <li><strong>View ALL transactions</strong> — see every deal, not just your own.</li>
+  <li><strong>Edit transactions</strong> — add, edit, delete deals and change a deal's stage.</li>
+  <li><strong>Manage users</strong> — unlocks the <strong>Email Change Requests</strong> page. (Only Super Admin &amp; Operations Manager.)</li>
+  <li><strong>Manage onboarding</strong> — see and approve/reject new agents in onboarding. (Only Super Admin &amp; Operations Manager.)</li>
+  <li><strong>View reports</strong> — see the reporting charts on the Home screen.</li>
+  <li><strong>Manage announcements</strong> — add/edit/delete the "Team Updates" announcements.</li>
+  <li><strong>Access training</strong> — open the Training screen.</li>
+  <li><strong>Manage forms</strong> — add, edit and delete items on the Forms &amp; Documents page.</li>
+  <li><strong>Must onboard</strong> — this person is treated as still onboarding (the New Agent experience).</li>
+</ul>
+
+<div class="callout">
+<strong>Super-Admin-only actions:</strong> A few powerful actions are reserved for the <strong>"Super Admin / Leadership"</strong> role <em>only</em> — not even the Operations Manager has them:
+<ul style="margin-bottom:0">
+  <li><strong>Adding</strong> or <strong>deleting</strong> team members in the Team Directory</li>
+  <li><strong>Assigning a role</strong> to a team member</li>
+  <li>Opening the <strong>Manage Roles</strong> page</li>
+  <li><strong>Adding / editing / deleting training resources</strong></li>
+</ul>
+</div>
+
+<div class="warn">
+<strong>⚠️ Good to know:</strong> the permission switches are editable, so the table above reflects today's settings — you can change most of them anytime on the Manage Roles page. Note that with the current settings, <em>every</em> role can already view all transactions, so the "see only my own deals" behaviour isn't active right now.
+</div>
+
+<h2 class="pagebreak">5. The complete "Who can see &amp; do what" matrix</h2>
+<p>This is the single, consolidated view of every screen and action, and which role gets it. <span class="small">(SA = Super Admin / Leadership, OM = Operations Manager, TC = Transaction Coordinator, VA = Virtual Assistant / Marketing, AG = Agent, NA = New Agent.)</span></p>
+
+<table>
+<thead>
+<tr><th>Screen / Action</th><th>SA</th><th>OM</th><th>TC</th><th>VA</th><th>AG</th><th>NA</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Home</strong> — view dashboard &amp; stats</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Home — see reporting charts</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Home — add/edit/delete announcements</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td><strong>Transactions</strong> — view</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Transactions — add/edit/delete/change stage</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td><strong>Team Directory</strong> — view &amp; search</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Team — edit your <em>own</em> card</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Team — <strong>add</strong> a member</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td>Team — edit <em>anyone</em> / <strong>delete</strong> a member</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td>Team — <strong>assign a role</strong> to a member</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Training</strong> — view resources</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Training — add/edit/delete resources</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Forms &amp; Documents</strong> — view</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Forms — add/edit/delete</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Onboarding</strong> — complete own tasks</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td></tr>
+<tr><td>Onboarding — manage &amp; approve/reject agents</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Profile</strong> — edit own name/phone, change password</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td><strong>Manage Roles</strong> — change permissions</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Email Change Requests</strong> — approve/decline</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td><strong>Notifications</strong> bell</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+</tbody>
+</table>
+<p class="small">The "add/edit announcements", "edit transactions", and "see reports" rows follow the role switches in Section 4, so if you change a switch in Manage Roles, the matching row above changes too. The Super-Admin-only rows (add/delete team members, assign roles, manage training, Manage Roles page) are fixed to Super Admin and are not affected by the switches.</p>
+
+<h2 class="pagebreak">6. Every screen, explained</h2>
+
+<p><strong>How you move around:</strong> the main menu is a bar at the <strong>bottom</strong> of the screen with <em>Home, Deals, Team, Training</em> (only if your role can access training) and <em>Forms</em>. Other screens — <em>Profile, Onboarding,</em> and <em>Manage Roles</em> — are reached from the menu that opens when you tap the round <strong>avatar</strong> in the top-right. A <strong>bell</strong> icon beside it opens notifications.</p>
+
+<h3>(a) Home (Dashboard)</h3>
+<ul>
+  <li>A welcome banner and three summary numbers: <strong>Active, Pending, Closed</strong> deals (calculated from transactions).</li>
+  <li><span class="tag">Reports</span> If the role can <em>View Reports</em>: reporting sections appear — <strong>Pipeline by Stage</strong> (count + dollar value per stage), <strong>Agent Performance</strong> (ranked by deals and total volume), and <strong>Deals Closed by Month</strong> (a 6-month bar chart).</li>
+  <li>For a New Agent not yet approved: a reminder card to complete onboarding.</li>
+  <li>A <strong>team video</strong> (embedded YouTube).</li>
+  <li><strong>Team Updates</strong> — company announcements. <span class="tag">Announcements</span> If the role can <em>Manage Announcements</em>, they can add, edit and delete these here.</li>
+  <li><strong>Quick Access</strong> tiles to Deals, Team, Training and Forms.</li>
+  <li>An embedded <strong>company Google Calendar</strong>.</li>
+  <li>Social media links (Facebook, Instagram, LinkedIn).</li>
+</ul>
+<p class="small">Reports appear here on the Home screen — there is no separate Reports page.</p>
+
+<h3>(b) Transactions ("Deals")</h3>
+<ul>
+  <li>The deal pipeline: a row of counts per stage, filter buttons (<em>All, Active, Pending, Closed, Lost</em>) and a search box (by client, address or agent).</li>
+  <li><strong>Who sees what:</strong> roles with <em>View ALL transactions</em> see every deal; otherwise a person would see only deals assigned to them. (Currently all roles view all.)</li>
+  <li><span class="tag">Edit</span> If the role can <em>Edit Transactions</em>: an <strong>Add</strong> button, plus edit, delete, and a quick stage-change dropdown on each deal.</li>
+  <li>Each deal stores: property address, client name, client email, client phone, the assigned agent (chosen from the Team Directory), stage, price, listing/offer/contract/closing dates, notes, a Zillow link, and a Google Drive folder link.</li>
+  <li>The 10 stages: <strong>Lead, Active, Offer, Pending, Under Contract, Closing, Closed, Archived, Lost, Withdrawn</strong>.</li>
+  <li>Tapping a deal opens a detail panel. If no Zillow link is provided, the app builds one from the address.</li>
+</ul>
+
+<h3>(c) Team Directory (titled "Agent Directory")</h3>
+<ul>
+  <li>A searchable list of active team members as cards (photo or initials, name, email, and quick buttons to open their Drive folder, call, or email them).</li>
+  <li><span class="tag admin">Super Admin only</span> <strong>Adding</strong> a member. Fields: full name, email, phone, photo (upload, max 5MB — auto-compressed), Google Drive folder link, and — only when editing someone who already has a login — a <strong>Role</strong> selector (changeable by Super Admin only).</li>
+  <li><strong>Editing:</strong> the Super Admin can edit anyone; a regular user can edit only their <em>own</em> card.</li>
+  <li><span class="tag admin">Super Admin only</span> <strong>Deleting</strong> a member.</li>
+</ul>
+<div class="callout"><strong>This directory is the gatekeeper for registration.</strong> Adding a person here (with their email) is exactly what allows that person to sign up for an account. This is the most common first task for you as Super Admin.</div>
+
+<h3>(d) Training &amp; Support</h3>
+<ul>
+  <li>Open to any role that can <em>Access Training</em> (all roles currently can).</li>
+  <li>Lists training resources grouped by category, with category filter buttons. Each resource shows a title, description, type (video / document / link / course), an optional "Required" badge, and a link to open it.</li>
+  <li><span class="tag admin">Super Admin only</span> Adding / editing / deleting resources.</li>
+</ul>
+
+<h3>(e) Forms &amp; Documents</h3>
+<ul>
+  <li>A list of important links (Google Forms, documents, etc.) that open in a new tab. Each entry has a <strong>title</strong>, <strong>URL</strong>, and an optional <strong>description</strong>.</li>
+  <li>Available to everyone logged in; no special permission needed to <em>view</em>.</li>
+  <li><span class="tag">Manage forms</span> If the role can <em>Manage Forms</em>: an <strong>Add</strong> button appears in the header, plus edit and delete buttons on each form. Forms are stored in the database and ordered automatically.</li>
+  <li>Two forms are pre-loaded: <strong>"Accepted Offer &amp; Closing Form"</strong> and <strong>"Transaction Update Form."</strong></li>
+</ul>
+
+<h3>(f) Onboarding</h3>
+<ul>
+  <li><strong>For a New Agent:</strong> a progress bar and task sections — <em>Getting Started, Licensing &amp; Compliance, Training, Final Steps</em>. Tasks can be check-off items, document uploads (max 10MB), videos, or forms. When all required tasks are done, a <strong>"Submit for approval"</strong> button appears; submitting marks them "pending approval" and notifies the admins.</li>
+  <li><span class="tag">Manage onboarding</span> <strong>For admins</strong> (Super Admin &amp; Operations Manager): an "Onboarding Management" view listing New Agents and their progress; each expands to show their tasks and uploaded documents. For anyone pending approval, the admin can <strong>Approve</strong> (which promotes them to the <strong>"Agent"</strong> role and notifies them) or <strong>Reject</strong>.</li>
+  <li><strong>For everyone else</strong> (already-approved staff): a read-only "Onboarding Complete" history.</li>
+  <li>The 11 standard onboarding tasks: (1) Welcome to CRG video, (2) Complete Profile, (3) Review Company Policies, (4) Upload Real Estate License, (5) E&amp;O Insurance proof, (6) W-9 Form, (7) CRM Training, (8) Transaction Process Overview, (9) Marketing Guidelines <span class="small">(optional)</span>, (10) Schedule Orientation Call, (11) Submit Onboarding Completion Form.</li>
+</ul>
+<div class="warn"><strong>⚠️ Good to know:</strong> rejecting an agent updates their status but does not currently send them a notification (they will, however, see a "not approved" message on their own onboarding screen).</div>
+
+<h3>(g) Profile</h3>
+<ul>
+  <li>Shows avatar (initials), name, role, and member-since date.</li>
+  <li>The user can edit their <strong>Full Name</strong> and <strong>Phone</strong> directly (saved immediately).</li>
+  <li>Changing <strong>Email</strong> submits an approval request (not immediate) and shows its status (pending / approved / declined).</li>
+  <li><strong>Change Password:</strong> current password (re-verified) + new password (min 6 characters) + confirmation.</li>
+</ul>
+
+<h3>(h) Email Change Requests <span class="tag">Manage users</span></h3>
+<ul>
+  <li>Open to roles that can <em>Manage Users</em> (Super Admin &amp; Operations Manager); others see a "no permission" message.</li>
+  <li>Shows pending email-change requests with <strong>Approve / Decline</strong> buttons, plus a history of past decisions.</li>
+  <li>When approved, the system updates the person's actual login email, their profile, and their directory entry, then notifies them. When declined, it notifies them it was declined.</li>
+</ul>
+
+<h2 class="pagebreak">7. Manage Roles — your control panel for access <span class="tag admin">Super Admin only</span></h2>
+<p>This is the screen where <strong>you decide what each role is allowed to do</strong>. Reach it from the top-right avatar menu → <strong>Manage Roles</strong>. Anyone who isn't a Super Admin who tries to open it sees "You don't have permission to view this page."</p>
+<p><strong>How it works:</strong></p>
+<ul>
+  <li>It lists every role <em>except</em> Super Admin (your own role always keeps full access and can't be limited).</li>
+  <li>Tap a role to expand it, then flip switches on or off. <strong>Changes take effect immediately</strong> for everyone with that role.</li>
+  <li>The six switches you can toggle here are: <strong>View All Transactions, Edit Transactions, View Reports, Manage Announcements, Access Training,</strong> and <strong>Manage Forms</strong>.</li>
+</ul>
+<div class="warn"><strong>⚠️ Note:</strong> three settings are <em>not</em> adjustable from this screen — <strong>Manage Users</strong>, <strong>Manage Onboarding</strong>, and the <strong>Must-onboard</strong> flag. Those are fixed by the role itself. Likewise, the Super-Admin-only actions (adding/deleting team members, assigning roles, managing training) cannot be granted to other roles from here — they are tied to the Super Admin role.</div>
+<p>So, in practice, the access you can hand out per section from Manage Roles is: who can see reports, who can edit deals, who can post announcements, who can open training, and whether a role sees all deals. For who can manage onboarding or approve email changes, you would change the <em>person's role</em> (e.g. make them an Operations Manager) on the Team Directory.</p>
+
+<h2>8. Notifications</h2>
+<ul>
+  <li>A <strong>bell</strong> icon in the top bar shows notifications in real time, with a red unread-count badge. Users can mark all as read, or tap one to jump to the related page.</li>
+  <li>Notifications are created automatically when: someone <strong>requests an email change</strong> (admins notified), an email change is <strong>approved or declined</strong> (user notified), a New Agent <strong>submits onboarding</strong> for approval (admins notified), and a New Agent is <strong>approved</strong> (user notified).</li>
+</ul>
+
+<h2>9. The data behind the app</h2>
+<p>In simple terms, the information is organised into these areas of the database: user <strong>profiles</strong>, <strong>roles</strong>, the <strong>team directory</strong>, <strong>transactions/deals</strong>, <strong>announcements</strong>, <strong>onboarding tasks</strong>, each person's <strong>onboarding progress</strong>, <strong>training resources</strong>, <strong>forms &amp; documents</strong>, <strong>email-change requests</strong>, and <strong>notifications</strong>. Logins are kept separately in the secure authentication system. Uploaded files live in two storage areas: <strong>team photos</strong> and <strong>onboarding documents</strong>.</p>
+
+<h2 class="pagebreak">10. Important things to be aware of</h2>
+<div class="warn">
+<p><strong>Security model — please read.</strong> The app correctly <em>hides</em> buttons and pages based on each person's role, so in normal day-to-day use everyone is limited to what they should do. However, the deeper database protections are currently <strong>permissive</strong> — they mainly check that a person is logged in, rather than enforcing each role's limits at the data level. In plain terms: the safeguards live in the app's screens rather than deep in the database.</p>
+<p>This is generally fine for a small, trusted internal team. But it means a technically-skilled logged-in user could, in theory, reach data the screens would normally hide. If stricter separation is ever needed, ask whoever maintains the app to <strong>tighten the database security rules</strong>. (One part is already properly locked down at the data level: the email-change approval process.)</p>
+</div>
+<div class="warn">
+<strong>Uploaded files are publicly readable by link.</strong> Onboarding documents (licenses, insurance, W-9) and team photos are stored in areas readable by anyone who has the direct file link. Treat them as not strictly private, and keep that in mind before uploading sensitive documents.
+</div>
+<ul>
+  <li>The self-service <strong>password reset works end to end</strong> (see Section 3). Reminder: the link must be opened in the same browser it was requested from, and it expires after a while.</li>
+  <li>There is <strong>no separate "Reports" or "Settings" page</strong> — reports appear on the Home screen.</li>
+</ul>
+
+<h2>11. Quick-start checklist for the Super Admin</h2>
+<p>Your most common tasks, at a glance:</p>
+<ol>
+  <li><strong>Onboard a new person:</strong> Team Directory → <em>Add</em> → enter their name &amp; email (and details). This is what lets them register. Tell them to sign up with that exact email.</li>
+  <li><strong>Approve a new agent:</strong> Onboarding → find the agent (pending approval) → <em>Approve</em> (this promotes them from "New Agent" to "Agent"). Or <em>Reject</em>.</li>
+  <li><strong>Approve / decline an email change:</strong> open Email Change Requests (avatar menu or the notification) → <em>Approve</em> or <em>Decline</em>.</li>
+  <li><strong>Adjust what a role can do:</strong> Manage Roles → expand a role → flip the switches (reports, edit deals, announcements, training, view-all deals, manage forms).</li>
+  <li><strong>Change someone's role entirely:</strong> Team Directory → edit that member → set their Role (e.g. promote to Operations Manager). Needed for granting "manage users / manage onboarding."</li>
+  <li><strong>Post an announcement:</strong> Home → Team Updates → <em>Add</em>.</li>
+  <li><strong>Manage training resources:</strong> Training → <em>Add / Edit / Delete</em>.</li>
+  <li><strong>Manage forms &amp; documents:</strong> Forms → <em>Add / Edit / Delete</em>. (Any role with the "Manage Forms" switch can do this too.)</li>
+</ol>
+
+<p class="small" style="margin-top:30px;border-top:1px solid var(--line);padding-top:10px;">End of guide · CRG Dashboard — Operations Manager &amp; Super Admin Guide. This document describes the app exactly as it is currently built.</p>
+
+</div>
+</body>
+</html>

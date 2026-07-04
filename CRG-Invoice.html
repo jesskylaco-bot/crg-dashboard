@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Invoice — CRG Dashboard</title>
+<style>
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#1c1c1a; font-size:13px; line-height:1.5; margin:0; }
+  .doc { padding:40px 48px; }
+  .top { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:3px solid #0a0a0a; padding-bottom:18px; }
+  .brand { font-family:Georgia,serif; font-size:34px; font-weight:700; color:#0a0a0a; }
+  .brand .dot{ color:#8aab8e; }
+  .doclabel { text-align:right; }
+  .doclabel h1 { font-family:Georgia,serif; font-size:26px; margin:0; color:#0a0a0a; letter-spacing:1px; }
+  .doclabel .meta { color:#6b6b66; font-size:12px; margin-top:6px; }
+  .duebox { display:inline-block; background:#0a0a0a; color:#fff; padding:8px 14px; border-radius:8px; margin-top:8px; font-size:13px; }
+  .duebox .amt { font-size:18px; font-weight:700; }
+  .parties { display:flex; justify-content:space-between; gap:30px; margin:24px 0 8px; }
+  .parties .box { flex:1; }
+  .parties h3 { font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:#8a8a84; margin:0 0 6px; }
+  .parties p { margin:1px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:12.5px; }
+  th { background:#0a0a0a; color:#fff; text-align:left; padding:9px 11px; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; }
+  td { border-bottom:1px solid #e6e6e1; padding:9px 11px; vertical-align:top; }
+  td.num,th.num { text-align:right; white-space:nowrap; }
+  .totals { width:320px; margin-left:auto; }
+  .totals td { border:none; padding:5px 11px; }
+  .totals .grand td { border-top:2px solid #0a0a0a; font-weight:700; font-size:15px; padding-top:10px; }
+  .totals .paid td { color:#2e7d32; }
+  h2 { font-family:Georgia,serif; font-size:16px; margin:26px 0 8px; color:#0a0a0a; }
+  .muted { color:#6b6b66; }
+  .small { font-size:11px; color:#6b6b66; }
+  .pay { background:#f5f5f3; border:1px solid #e6e6e1; border-radius:10px; padding:14px 18px; margin-top:16px; }
+  .pay h3 { margin:0 0 8px; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#6b6b66; }
+  .pay table td { border:none; padding:2px 0; }
+  @page { margin:16mm; }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <div class="top">
+    <div>
+      <div class="brand">CRG<span class="dot">.</span></div>
+      <div class="small" style="margin-top:4px;">CRG Dashboard — Real Estate Operations Platform</div>
+    </div>
+    <div class="doclabel">
+      <h1>INVOICE</h1>
+      <div class="meta">
+        Invoice #: INV-2026-001<br>
+        Date: June 23, 2026<br>
+        Due: Upon receipt (Net 7)
+      </div>
+      <div class="duebox">Amount due: <span class="amt">$4,750.00 USD</span></div>
+    </div>
+  </div>
+
+  <div class="parties">
+    <div class="box">
+      <h3>From</h3>
+      <p><strong>[Your Full Name / Business Name]</strong></p>
+      <p>[Street Address]</p>
+      <p>[City, State, PIN, India]</p>
+      <p>[Email] · [Phone]</p>
+      <p class="small">[GSTIN: if registered]</p>
+    </div>
+    <div class="box">
+      <h3>Bill to</h3>
+      <p><strong>Cobb Realty Group</strong></p>
+      <p>Attn: [Cara Flores, Operations Manager]</p>
+      <p>[Street Address]</p>
+      <p>Clinton Township, MI, USA</p>
+      <p>[Email]</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Description</th><th class="num">Qty</th><th class="num">Rate (USD)</th><th class="num">Amount (USD)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <strong>CRG Dashboard — custom web application</strong>
+          <div class="small" style="margin-top:4px;">Deposit invoice — 50% of total project fee, due to commence work.</div>
+        </td>
+        <td class="num">1</td>
+        <td class="num">$9,500.00</td>
+        <td class="num">$9,500.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="totals">
+    <tr><td>Project total</td><td class="num">$9,500.00</td></tr>
+    <tr><td>GST (export of services — zero-rated)</td><td class="num">$0.00</td></tr>
+    <tr><td>This invoice — 50% deposit</td><td class="num">$4,750.00</td></tr>
+    <tr class="grand"><td>Amount due now (USD)</td><td class="num">$4,750.00</td></tr>
+    <tr class="paid"><td>Remaining balance (invoiced on delivery)</td><td class="num">$4,750.00</td></tr>
+  </table>
+
+  <div class="pay">
+    <h3>Payment details</h3>
+    <table>
+      <tr><td style="width:160px;"><strong>Wise / PayPal / Payoneer:</strong></td><td>[your Wise / PayPal / Payoneer email]</td></tr>
+      <tr><td><strong>Bank (USD wire / SWIFT):</strong></td><td>[Bank name, account #, SWIFT/IFSC — for inbound USD transfers to India]</td></tr>
+      <tr><td><strong>Reference:</strong></td><td>INV-2026-001</td></tr>
+    </table>
+    <p class="small" style="margin-top:8px;">Please include the invoice number as the payment reference. Amounts are in U.S. dollars (USD).</p>
+  </div>
+
+  <p class="small" style="margin-top:18px;">Thank you for your business. Questions about this invoice? Contact [Your Name] at [Email].</p>
+
+</div>
+</body>
+</html>

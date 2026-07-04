@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quotation — CRG Dashboard</title>
+<style>
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#1c1c1a; font-size:13px; line-height:1.5; margin:0; }
+  .doc { padding:40px 48px; }
+  .top { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:3px solid #0a0a0a; padding-bottom:18px; }
+  .brand { font-family:Georgia,serif; font-size:34px; font-weight:700; color:#0a0a0a; }
+  .brand .dot{ color:#8aab8e; }
+  .doclabel { text-align:right; }
+  .doclabel h1 { font-family:Georgia,serif; font-size:26px; margin:0; color:#0a0a0a; letter-spacing:1px; }
+  .doclabel .meta { color:#6b6b66; font-size:12px; margin-top:6px; }
+  .parties { display:flex; justify-content:space-between; gap:30px; margin:24px 0 8px; }
+  .parties .box { flex:1; }
+  .parties h3 { font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:#8a8a84; margin:0 0 6px; }
+  .parties p { margin:1px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:12.5px; }
+  th { background:#0a0a0a; color:#fff; text-align:left; padding:9px 11px; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; }
+  td { border-bottom:1px solid #e6e6e1; padding:9px 11px; vertical-align:top; }
+  td.num,th.num { text-align:right; white-space:nowrap; }
+  .totals { width:300px; margin-left:auto; }
+  .totals td { border:none; padding:5px 11px; }
+  .totals .grand td { border-top:2px solid #0a0a0a; font-weight:700; font-size:15px; padding-top:10px; }
+  h2 { font-family:Georgia,serif; font-size:16px; margin:26px 0 8px; color:#0a0a0a; }
+  ul { margin:6px 0; padding-left:20px; } li { margin:3px 0; }
+  .muted { color:#6b6b66; }
+  .small { font-size:11px; color:#6b6b66; }
+  .note { background:#f3f7f3; border-left:4px solid #8aab8e; padding:10px 14px; border-radius:0 8px 8px 0; margin:14px 0; }
+  .sign { display:flex; gap:40px; margin-top:40px; }
+  .sign .col { flex:1; } .sign .line { border-top:1px solid #999; margin-top:34px; padding-top:5px; font-size:11px; color:#6b6b66; }
+  @page { margin:16mm; }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <div class="top">
+    <div>
+      <div class="brand">CRG<span class="dot">.</span></div>
+      <div class="small" style="margin-top:4px;">CRG Dashboard — Real Estate Operations Platform</div>
+    </div>
+    <div class="doclabel">
+      <h1>QUOTATION</h1>
+      <div class="meta">
+        Quote #: QUO-2026-001<br>
+        Date: June 23, 2026<br>
+        Valid until: July 23, 2026
+      </div>
+    </div>
+  </div>
+
+  <div class="parties">
+    <div class="box">
+      <h3>From</h3>
+      <p><strong>[Your Full Name / Business Name]</strong></p>
+      <p>[Street Address]</p>
+      <p>[City, State, PIN, India]</p>
+      <p>[Email] · [Phone]</p>
+      <p class="small">[GSTIN: if registered]</p>
+    </div>
+    <div class="box">
+      <h3>Prepared for</h3>
+      <p><strong>Cobb Realty Group</strong></p>
+      <p>Attn: [Cara Flores, Operations Manager]</p>
+      <p>[Street Address]</p>
+      <p>Clinton Township, MI, USA</p>
+      <p>[Email]</p>
+    </div>
+  </div>
+
+  <p class="muted">Thank you for the opportunity. This quotation covers the design, development, deployment, and handover of the <strong>CRG Dashboard</strong>, a custom, mobile-first real-estate operations platform, as described below.</p>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Description</th><th class="num">Amount (USD)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <strong>CRG Dashboard — custom web application (one-time build &amp; handover)</strong>
+          <div class="small" style="margin-top:5px;">Includes all features and deliverables listed below.</div>
+        </td>
+        <td class="num">$9,500.00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <strong>Optional: Maintenance &amp; Hosting Support Plan</strong> — billed monthly, optional
+          <div class="small" style="margin-top:5px;">Hosting management (Vercel + Supabase), bug fixes, minor changes, and support. Month-to-month; cancel anytime.</div>
+        </td>
+        <td class="num">$200.00 / mo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="totals">
+    <tr><td>One-time build subtotal</td><td class="num">$9,500.00</td></tr>
+    <tr><td>GST (export of services — zero-rated)</td><td class="num">$0.00</td></tr>
+    <tr class="grand"><td>One-time total (USD)</td><td class="num">$9,500.00</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>Payment schedule:</strong> 50% deposit of <strong>$4,750.00</strong> to begin, and <strong>$4,750.00</strong> on delivery/handover. The optional maintenance plan, if selected, is billed separately each month.
+  </div>
+
+  <h2>What's included (scope of work)</h2>
+  <ul>
+    <li><strong>Secure user accounts &amp; login</strong> (email + password), with team-gated registration.</li>
+    <li><strong>Role-based access control</strong> — six roles plus a Super Admin "Manage Roles" control panel to adjust permissions.</li>
+    <li><strong>Transactions / Deals pipeline (CRM)</strong> — 10 stages, search &amp; filters, add/edit/delete, deal detail view, Zillow &amp; Google Drive links.</li>
+    <li><strong>Team Directory</strong> — member profiles with photo uploads, click-to-call/email, Drive links, and role assignment.</li>
+    <li><strong>New-Agent Onboarding workflow</strong> — task checklists, document uploads, progress tracking, and admin submit/approve/reject.</li>
+    <li><strong>Training &amp; Resources module</strong> — categorized resources, admin-managed.</li>
+    <li><strong>Announcements</strong> (team updates) with admin management.</li>
+    <li><strong>Email-change request &amp; admin approval</strong> workflow.</li>
+    <li><strong>Real-time in-app notifications.</strong></li>
+    <li><strong>Reporting dashboard</strong> — pipeline by stage, agent performance, deals closed by month.</li>
+    <li><strong>Embeds &amp; links</strong> — company calendar, team video, forms, social links.</li>
+    <li><strong>Mobile-first design + installable PWA</strong> (add to home screen, app icons for iOS/Android).</li>
+    <li><strong>Deployment</strong> to Vercel + Supabase, and <strong>handover documentation</strong> (Operations Manager &amp; Super Admin guide).</li>
+    <li><strong>30-day post-launch bug-fix warranty.</strong></li>
+  </ul>
+
+  <h2>Not included</h2>
+  <ul class="small">
+    <li>Native App Store / Google Play submissions (the app installs as a PWA).</li>
+    <li>Third-party subscription/hosting fees (Vercel, Supabase, domain) — billed directly to the client.</li>
+    <li>New features beyond the scope above, ongoing content entry, or data migration beyond initial setup — quoted separately.</li>
+  </ul>
+
+  <p class="small" style="margin-top:22px;">This quotation is valid for 30 days. Prices are in U.S. dollars. Acceptance of this quote will be formalized in a separate Software Development &amp; Sale Agreement.</p>
+
+  <div class="sign">
+    <div class="col"><div class="line">Accepted by (Client) &amp; Date</div></div>
+    <div class="col"><div class="line">[Your Name] (Developer) &amp; Date</div></div>
+  </div>
+
+</div>
+</body>
+</html>

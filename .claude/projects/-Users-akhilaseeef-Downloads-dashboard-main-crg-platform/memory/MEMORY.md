@@ -1,0 +1,2 @@
+- [CRG Platform Overview](project_crg_platform.md) — Brokerage ops dashboard, Google Sheets → Supabase migration, incremental build
+- [Akhil (User)](user_akhil.md) — Developer implementing CRG Platform for a friend's real estate brokerage
